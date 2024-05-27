@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Visualização do template</h1>
+        <div class="table-container">
+            <table id="editableTable">
+                <thead id="tableHeader"></thead>
+                <tbody id="tableBody"></tbody>
+                <tfoot id="tableFooter"></tfoot>
+            </table>
+        </div>
+        <button onclick="copyTable()">Copiar template</button>
+    </div>
+    <div class="container">
+        <h1>Área de edição do template</h1>
+        <form id="editForm">
+            <label for="section">Seções:</label>
+            <select id="section">
+                <option value="tableHeader">Header</option>
+                <option value="tableBody">Body</option>
+                <option value="tableFooter">Footer</option>
+            </select>
+            <label for="numContainers">Quantidade de containers:</label>
+            <input type="number" id="numContainers" name="numContainers" min="1" required>
+            <div id="containerInputs"></div>
+            <button type="button" onclick="addSection()">Adicionar seção</button>
+        </form>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
